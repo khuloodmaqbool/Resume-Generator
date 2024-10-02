@@ -7,12 +7,12 @@ import Link from "next/link";
 import React from "react";
 
 
-const HowItWorks = () => {
+const HowItWorks= (): JSX.Element => {
 
-    let cards = ` text-center rounded-lg m-8 w-80 p-5`
-    let iconDiv = `border-4  bg-white border-light_purple rounded-full w-14 h-14 mx-auto flex items-center`
-    let btn_classes = `bg-gradient-to-r from-blue_col via-purple_col to-pink_col px-4 py-3 rounded-lg text-white`
-    let mainCardDiv = `flex justify-center items-center `
+    const cards = ` text-center rounded-lg m-8 w-80 p-5`
+    const iconDiv = `border-4  bg-white border-light_purple rounded-full w-14 h-14 mx-auto flex items-center`
+    const btn_classes = `bg-gradient-to-r from-blue_col via-purple_col to-pink_col px-4 py-3 rounded-lg text-white`
+    const mainCardDiv = `flex justify-center items-center `
     return (
         <>
             <h1 className=" text-4xl md:text-6xl text-center font-extrabold mt-6 px-3">RESUME IN 3 <span style={{ fontFamily: "Dancing Script" }} className=' text-purple_col'>STEPS</span></h1>

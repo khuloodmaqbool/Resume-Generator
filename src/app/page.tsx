@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { PiAlignCenterVerticalSimpleBold } from "react-icons/pi";
 import { MdOutlineColorLens, MdOutlineDesignServices } from "react-icons/md";
@@ -6,12 +7,12 @@ import Link from "next/link";
 import React from "react";
 
 
-export default function Home() {
-  let icons = "w-10 h-10";
-  let divCard = "p-3 rounded-lg text-white border border-white bg-l_white flex flex-col w-80";
-  let btn_classes = `bg-gradient-to-r from-blue_col via-purple_col to-pink_col px-4 py-3 rounded-lg text-white`
+export default function Home(): JSX.Element {
+  const icons = "w-10 h-10";
+  const divCard = "p-3 rounded-lg text-white border border-white bg-l_white flex flex-col w-80";
+  const btn_classes = `bg-gradient-to-r from-blue_col via-purple_col to-pink_col px-4 py-3 rounded-lg text-white`
 
-  let CardContent = [
+  const CardContent = [
     {
       id: 1,
       icon: <PiAlignCenterVerticalSimpleBold className={`${icons}`} />,
@@ -19,19 +20,19 @@ export default function Home() {
       para: "Create a professional resume effortlessly in just a few steps."
     },
     {
-      id:2,
+      id: 2,
       icon: <MdOutlineDesignServices className={`${icons}`} />,
       subHeading: "Pre-designed Sections",
       para: "Add or remove essential sections like Education, Work Experience, and Skills."
     },
     {
-      id:3,
+      id: 3,
       icon: <MdOutlineColorLens className={`${icons}`} />,
       subHeading: "Multiple Color Themes",
       para: "Personalize your resume with various color options."
     },
     {
-      id:4,
+      id: 4,
       icon: <FiDownloadCloud className={`${icons}`} />,
       subHeading: "Instant PDF Download",
       para: "Generate and download your resume as a high-quality PDF instantly."
@@ -45,24 +46,21 @@ export default function Home() {
         <div className="blurcircle" style={{ position: "absolute", right: "10px", top: "10px" }} ></div>
 
         <h1 className="font-black mb-12 text-black border-0 text-4xl md:text-7xl">
-  DESIGN YOUR PERFECT <br />
-  RESUME IN  <span className="headingdiv"> <span style={{ fontFamily: "Dancing Script" }}  className="text text-purple_col">MINUTES</span></span>
-</h1>
-
-
-
+          DESIGN YOUR PERFECT <br />
+          RESUME IN  <span className="headingdiv"> <span style={{ fontFamily: "Dancing Script" }} className="text text-purple_col">MINUTES</span></span>
+        </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4 mx-5 place-content-end mb-10">
           <div>
 
             <Image
-             style={{ width: "80%" }}
-                    src="/herosection_img.png"
-                    alt="herosection img"
-                    className='desktop:w-10 w-8'
-                    width={500}
-                    height={500}
-                />
+              style={{ width: "80%" }}
+              src="/herosection_img.png"
+              alt="herosection img"
+              className='desktop:w-10 w-8'
+              width={500}
+              height={500}
+            />
           </div>
 
           <div className="flex items-end" >
@@ -70,13 +68,13 @@ export default function Home() {
               <p className="mx-auto" >Craft a standout resume tailored to your career needs. Our user-friendly platform makes it quick, easy, and free to showcase your skills and experiences.
                 Craft a standout resume tailored to your career needs. Our user-friendly platform makes it quick, easy, and free to showcase your skills and experiences.
               </p>
-        
+
 
               <Link href="/build-your-resume" >
-              <button className={`mt-5 ${btn_classes} `} >Get Started Now
-                
-              </button>
-                  </Link>
+                <button className={`mt-5 ${btn_classes} `} >Get Started Now
+
+                </button>
+              </Link>
 
 
 

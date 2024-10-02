@@ -9,7 +9,7 @@ interface FaqInterface{
     answer: string;
 }
 
-export const Faq = () => {
+export const Faq = (): JSX.Element => {
     const [activeId, setActiveId] = useState<number | null>(null);
 
     const FaqContent: FaqInterface[] = [

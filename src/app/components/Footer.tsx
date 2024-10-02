@@ -2,11 +2,12 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import Link from "next/link";
+import React from "react";
 
-export const Footer = () => {
+export const Footer = (): JSX.Element  => {
 
-    let iconList = `rounded-full mx-8 flex justify-center items-center border border-l_grey w-12 h-12`
-  let quickLink = `mx-8 text-l_grey`
+    const iconList = `rounded-full mx-8 flex justify-center items-center border border-l_grey w-12 h-12`
+  const quickLink = `mx-8 text-l_grey`
     return (
         <>
             <footer style={{ backgroundColor: "rgb(31,41,55)"}} className="py-3 w-full"  >

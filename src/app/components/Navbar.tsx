@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaMagic } from "react-icons/fa";
+import React from "react";
 
-const Navbar = () => {
+const Navbar = (): JSX.Element  => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 

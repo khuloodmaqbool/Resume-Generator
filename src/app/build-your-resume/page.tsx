@@ -11,7 +11,8 @@ import { TiLocation } from "react-icons/ti";
 import Image from "next/image";
 import React from 'react';
 
-export const HowItWorks = () => {
+const BuildYourResume= (): JSX.Element => {
+
     const [display, setDisplay] = useState<boolean>(true);
     const [colorChanger, setColor] = useState("rgba(124, 13, 255, 1)");
 
@@ -215,11 +216,11 @@ export const HowItWorks = () => {
 
         setExperienceData([])
     }
-    let primaryBtn = `bg-gradient-to-r from-blue_col via-purple_col to-pink_col px-4 py-3 rounded-lg text-white`
-    let inpClasses = `border-b-2 border-black px-3 py-4 my-3 focus:outline-none rounded w-full text-sm desktop:text-base`
-    let subHeadingClass = `text-left text-xl desktop:text-2xl my-3`
-    let resumeSubHeading = ` text-lg md:text-xl lg:text-2xl w-full border rounded-3xl p-2 px-4 mt-3 mb-3 text-white`
-    let educationStyling = `text-base desktop:text-lg font-bold mt-5`
+    const primaryBtn = `bg-gradient-to-r from-blue_col via-purple_col to-pink_col px-4 py-3 rounded-lg text-white`
+    const inpClasses = `border-b-2 border-black px-3 py-4 my-3 focus:outline-none rounded w-full text-sm desktop:text-base`
+    const subHeadingClass = `text-left text-xl desktop:text-2xl my-3`
+    const resumeSubHeading = ` text-lg md:text-xl lg:text-2xl w-full border rounded-3xl p-2 px-4 mt-3 mb-3 text-white`
+    const educationStyling = `text-base desktop:text-lg font-bold mt-5`
 
     return (
         <>
@@ -472,4 +473,4 @@ export const HowItWorks = () => {
         </>
     );
 }
-export default HowItWorks;
+export default BuildYourResume;
