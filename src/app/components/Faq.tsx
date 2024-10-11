@@ -48,12 +48,14 @@ export const Faq = (): JSX.Element => {
         <div className="mx-auto mb-12" style={{ width: "80%" }}>
             {FaqContent.map((item) => (
                 <div key={item.id} style={{ borderLeft: "1px solid black" }} className="bg-white px-3 py-4 m-4 rounded-md ">
-                    <div className="flex justify-between items-center">
+                    
+                    <div  onClick={() => handleToggleBtn(item.id)} className="flex justify-between items-center cursor-pointer">
                         <p className="my-2">{item.question}</p>
-                        <button style={{ transition: "0.5s" }} onClick={() => handleToggleBtn(item.id)}>
+                        <button style={{ transition: "0.5s" }}>
                             {activeId === item.id ? <IoIosArrowUp /> : <IoIosArrowDown />}
                         </button>
                     </div>
+
                     <div >
                         {activeId === item.id && <p className="my-2">{item.answer}</p>}
                     </div>

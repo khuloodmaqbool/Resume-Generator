@@ -22,9 +22,6 @@ export const Footer = (): JSX.Element  => {
                     <li className={`${iconList}`}  style={{ color: "lightgray"}} ><TbBrandGithubFilled /></li>
                   </Link>
                   
-                   <Link href="https://github.com/khuloodmaqbool" target="blank">
-                   <li className={`${iconList}`}  style={{ color: "lightgray"}} ><FaFacebookF /></li>
-                  </Link>  
 
                 </ul>
                 <ul className="flex justify-center mt-3" >
