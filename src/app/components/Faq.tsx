@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface FaqInterface{
     id: number;
@@ -10,6 +13,12 @@ interface FaqInterface{
 }
 
 export const Faq = (): JSX.Element => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1200, 
+          once: true, 
+        });
+      }, []);
     const [activeId, setActiveId] = useState<number | null>(null);
 
     const FaqContent: FaqInterface[] = [
@@ -47,7 +56,7 @@ export const Faq = (): JSX.Element => {
     return (
         <div className="mx-auto mb-12" style={{ width: "80%" }}>
             {FaqContent.map((item) => (
-                <div key={item.id} style={{ borderLeft: "1px solid black" }} className="bg-white px-3 py-4 m-4 rounded-md ">
+                <div data-aos="fade-up" key={item.id} style={{ borderLeft: "1px solid black" }} className="bg-white px-3 py-4 m-4 rounded-md ">
                     
                     <div  onClick={() => handleToggleBtn(item.id)} className="flex justify-between items-center cursor-pointer">
                         <p className="my-2">{item.question}</p>
@@ -56,7 +65,7 @@ export const Faq = (): JSX.Element => {
                         </button>
                     </div>
 
-                    <div >
+                    <div className="text-gray-500" >
                         {activeId === item.id && <p className="my-2">{item.answer}</p>}
                     </div>
                 </div>
